@@ -13,7 +13,14 @@
 
   <title>建站日志 · 冰点论坛</title>
 
+  <meta
+    name="description"
+    content="ICEBBS 冰点论坛的建站日志、版本记录与开发历史。"
+  >
+
   <link rel="stylesheet" href="../style.css">
+
+  <link rel="icon" href="../favicon.svg">
 
 </head>
 
@@ -22,20 +29,37 @@
 
   <div class="site-shell">
 
+
+    <!-- 网站顶部 -->
+
     <header class="masthead">
 
       <div class="brand-row">
 
-        <a class="brand" href="../">
+        <a
+          class="brand"
+          href="../"
+          aria-label="冰点论坛首页"
+        >
 
-          <span class="brand-seal">冰</span>
+          <span class="brand-seal">
+            冰
+          </span>
 
           <span>
-            <strong>冰点论坛</strong>
-            <small>ICEBBS · SINCE 2026</small>
+
+            <strong>
+              冰点论坛
+            </strong>
+
+            <small>
+              ICEBBS · SINCE 2026
+            </small>
+
           </span>
 
         </a>
+
 
         <p class="masthead-note">
           一个人的论坛，一些长期存在的东西。
@@ -44,17 +68,31 @@
       </div>
 
 
-      <nav class="main-nav">
+      <!-- 顶部导航 -->
+
+      <nav
+        class="main-nav"
+        aria-label="主导航"
+      >
 
         <a href="../">
           论坛首页
         </a>
 
-        <span class="nav-placeholder"></span>
+        <span
+          class="nav-placeholder"
+          aria-hidden="true"
+        ></span>
 
-        <span class="nav-placeholder"></span>
+        <span
+          class="nav-placeholder"
+          aria-hidden="true"
+        ></span>
 
-        <a class="active" href="./">
+        <a
+          class="active"
+          href="./"
+        >
           建站日志
         </a>
 
@@ -63,7 +101,11 @@
     </header>
 
 
+
     <main>
+
+
+      <!-- 面包屑导航 -->
 
       <div class="crumbs">
 
@@ -71,7 +113,9 @@
           冰点论坛
         </a>
 
-        <span>›</span>
+        <span>
+          ›
+        </span>
 
         <strong>
           建站日志
@@ -79,6 +123,9 @@
 
       </div>
 
+
+
+      <!-- 建站日志主体 -->
 
       <section class="panel">
 
@@ -93,18 +140,227 @@
 
         <div class="panel-body">
 
-          <h2>
-            2026-09-01
-          </h2>
-
           <p>
-            ICEBBS 正式开始建设。
+            此处记录 ICEBBS 的主要版本、架构变化与重要更新。
           </p>
 
           <p>
-            第一版由 Codex 搭建。
-            随后开始将网站逐步改造为自己能够完全理解和维护的静态网站。
+            小规模文字修改、内容修正等一般不单独记录；
+            当网站出现具有阶段意义的变化时，则发布新的版本号。
           </p>
+
+
+
+          <hr>
+
+
+
+          <!-- v0.2.0 -->
+
+          <article>
+
+            <header>
+
+              <h2>
+                ICEBBS v0.2.0
+              </h2>
+
+              <p>
+                <strong>
+                  Static Rebuild · 静态化重构
+                </strong>
+              </p>
+
+              <time datetime="2026-09-02">
+                2026-09-02
+              </time>
+
+            </header>
+
+
+            <p>
+              本版本对 ICEBBS 的底层架构进行了第一次重大调整。
+              网站从最初由 Codex 搭建的现代 Web 工程，
+              重构为直接由浏览器读取的纯 HTML + CSS 静态网站。
+            </p>
+
+            <p>
+              此次重构的主要目的并不是追求更先进的技术，
+              而是使网站进入一个能够被自己完整理解、
+              修改和长期维护的阶段。
+            </p>
+
+
+            <h3>
+              主要改动
+            </h3>
+
+            <ul>
+
+              <li>
+                将网站主体重构为纯 HTML + CSS 静态页面。
+              </li>
+
+              <li>
+                GitHub Pages 改为直接从
+                <code>main / root</code>
+                分支目录部署。
+              </li>
+
+              <li>
+                移除 vinext、Vite、React、pnpm 等原有构建体系。
+              </li>
+
+              <li>
+                移除原 GitHub Actions 自动构建流程。
+              </li>
+
+              <li>
+                建立真正可独立访问的
+                <code>/build-log/</code>
+                页面。
+              </li>
+
+              <li>
+                保留并迁移 Codex 初版所建立的主要视觉风格。
+              </li>
+
+              <li>
+                清理不再使用的工程配置、依赖及开发环境文件。
+              </li>
+
+              <li>
+                ICEBBS 正式进入自主开发与维护阶段。
+              </li>
+
+            </ul>
+
+          </article>
+
+
+
+          <hr>
+
+
+
+          <!-- v0.1.0 -->
+
+          <article>
+
+            <header>
+
+              <h2>
+                ICEBBS v0.1.0
+              </h2>
+
+              <p>
+                <strong>
+                  Codex Prototype · 初始原型
+                </strong>
+              </p>
+
+              <time datetime="2026-09-01">
+                2026-09-01
+              </time>
+
+            </header>
+
+
+            <p>
+              ICEBBS 的第一个可公开访问版本。
+            </p>
+
+            <p>
+              网站最初由 Codex 根据 ICEBBS 的定位与视觉设想完成原型搭建，
+              建立了论坛式首页、主要色彩体系、导航结构与基础页面布局，
+              并首次部署至 GitHub Pages。
+            </p>
+
+
+            <h3>
+              主要内容
+            </h3>
+
+            <ul>
+
+              <li>
+                建立“冰点论坛 / ICEBBS”的基础视觉体系。
+              </li>
+
+              <li>
+                确立论坛式个人网站的整体页面结构。
+              </li>
+
+              <li>
+                建立冰点公告、开发与构建、个人项目、
+                阅读与写作、游戏与数码、生活随笔等初始板块。
+              </li>
+
+              <li>
+                使用 React、vinext、Vite 等现代 Web 技术构建第一版工程。
+              </li>
+
+              <li>
+                建立 GitHub 仓库并完成首次 GitHub Pages 部署。
+              </li>
+
+              <li>
+                ICEBBS 正式上线。
+              </li>
+
+            </ul>
+
+          </article>
+
+
+
+          <hr>
+
+
+
+          <!-- 版本规则 -->
+
+          <section>
+
+            <h2>
+              版本编号规则
+            </h2>
+
+            <p>
+              ICEBBS 使用三段式版本号：
+            </p>
+
+            <p>
+              <code>
+                v主版本.功能版本.修订版本
+              </code>
+            </p>
+
+            <ul>
+
+              <li>
+                <strong>主版本：</strong>
+                网站发生根本性的架构或定位变化。
+              </li>
+
+              <li>
+                <strong>功能版本：</strong>
+                增加新的主要功能、板块或完成阶段性重构。
+              </li>
+
+              <li>
+                <strong>修订版本：</strong>
+                修复问题、调整样式或进行较小规模更新。
+              </li>
+
+            </ul>
+
+            <p>
+              ICEBBS v1.0.0 将保留给网站基本结构、
+              核心板块与主要功能全部完成的第一个正式版本。
+            </p>
+
+          </section>
 
         </div>
 
@@ -113,17 +369,31 @@
     </main>
 
 
+
+    <!-- 页脚 -->
+
     <footer>
 
       <p>
-        ICEBBS · 冰点论坛
+        <strong>
+          ICEBBS · 冰点论坛
+        </strong>
+      </p>
+
+      <p>
+        此处没有新帖提醒，只有慢慢增加的内容。
       </p>
 
       <a href="../">
         ← 返回论坛首页
       </a>
 
+      <a href="#top">
+        返回顶部 ↑
+      </a>
+
     </footer>
+
 
   </div>
 
