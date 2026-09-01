@@ -32,7 +32,7 @@ export default function Home() {
           <Link className="active" href="/icebbs/">论坛首页</Link>
           <span className="nav-placeholder" aria-hidden="true" />
           <span className="nav-placeholder" aria-hidden="true" />
-          <span className="nav-placeholder" aria-hidden="true" />
+          <Link className="active" href="/icebbs/build-log/">建站日志</Link>
         </nav>
       </header>
 
