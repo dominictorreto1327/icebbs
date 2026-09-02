@@ -86,7 +86,7 @@ a:hover { color: var(--accent); text-decoration: underline; text-underline-offse
 .content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 294px; gap: 14px; margin-top: 14px; }
 .panel { border: 1px solid var(--line); background: var(--surface); box-shadow: 0 1px 1px rgba(35,73,98,.04); }
 .panel-title { min-height: 39px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--blue-deep); background: linear-gradient(#f5f9fb, #e4edf2); border-bottom: 1px solid var(--line); }
-.panel-title h2 { margin: 0; font: 700 15px/1.4 SimSun, serif; letter-spacing: .06em; }
+.panel-title h1, .panel-title h2 { margin: 0; font: 700 15px/1.4 SimSun, serif; letter-spacing: .06em; }
 .panel-title span { color: var(--muted); font-size: 11px; }
 
 .board-head { display: grid; grid-template-columns: 1fr 58px 180px; padding: 6px 12px 6px 66px; color: var(--muted); background: #f8fafb; border-bottom: 1px solid var(--line-soft); font-size: 11px; }
@@ -101,6 +101,57 @@ a:hover { color: var(--accent); text-decoration: underline; text-underline-offse
 .board-latest a, .board-latest time { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .board-latest a { font-size: 12px; }
 .board-latest time { margin-top: 3px; color: #8b969d; font: 10px/1.3 Verdana, sans-serif; }
+.board-latest .empty { color: #9aa4aa; font-size: 12px; }
+.boards-panel { margin-top: 14px; }
+
+.button {
+  min-height: 30px;
+  padding: 5px 14px;
+  border: 1px solid var(--blue-deep);
+  border-radius: var(--radius);
+  color: #fff;
+  background: var(--blue);
+  font: 600 13px/1.3 inherit;
+  cursor: pointer;
+}
+.button:hover { background: var(--blue-deep); }
+.button-secondary { color: var(--blue-deep); background: #fff; }
+.button-secondary:hover { color: #fff; }
+.board-toolbar { display: flex; align-items: center; gap: 12px; }
+.board-summary { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.board-summary p { margin: 0; }
+.board-total { color: var(--muted); white-space: nowrap; font-size: 12px; }
+
+.post-editor { margin-top: 14px; }
+.post-editor[hidden] { display: none; }
+.editor-note { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+.editor-form { display: grid; gap: 12px; }
+.editor-form label { display: grid; gap: 5px; color: var(--blue-deep); font-weight: 700; }
+.editor-form input, .editor-form textarea {
+  width: 100%;
+  border: 1px solid #aebdc7;
+  border-radius: var(--radius);
+  padding: 9px 10px;
+  color: var(--ink);
+  background: #fff;
+  font: 14px/1.65 inherit;
+}
+.editor-form textarea { min-height: 220px; resize: vertical; }
+.editor-form input:focus, .editor-form textarea:focus { outline: 2px solid var(--blue-pale); border-color: var(--blue); }
+.editor-actions { display: flex; gap: 8px; }
+.editor-status { min-height: 20px; margin: 0; color: var(--accent); font-size: 12px; }
+
+.topic-list { background: var(--surface); }
+.topic-empty { margin: 0; padding: 28px 16px; text-align: center; color: var(--muted); }
+.topic-row { padding: 16px; border-bottom: 1px solid var(--line-soft); scroll-margin-top: 12px; }
+.topic-row:last-child { border-bottom: 0; }
+.topic-row:target { background: #fffdf6; box-shadow: inset 4px 0 0 var(--blue); }
+.topic-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; }
+.topic-heading h2 { margin: 0; font: 700 16px/1.5 SimSun, serif; }
+.topic-heading time { color: var(--muted); font: 10px/1.5 Verdana, sans-serif; white-space: nowrap; }
+.topic-content { margin-top: 10px; color: #4b5b66; white-space: pre-wrap; overflow-wrap: anywhere; }
+.topic-content p { margin: 0; }
+.storage-notice { padding: 10px 12px; border: 1px dashed #b7c4cc; background: #f8fafb; color: var(--muted); font-size: 12px; }
 
 .sidebar { display: flex; flex-direction: column; gap: 14px; }
 .panel-body { padding: 14px; }
@@ -145,6 +196,9 @@ footer p:first-child { color: var(--blue-deep); font: 700 11px/1 Verdana, sans-s
   .board-mark { width: 32px; height: 32px; }
   .board-latest { display: none; }
   .board-count::after { content: ' 篇'; }
+  .board-summary, .topic-heading { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .panel-title .board-toolbar span { display: none; }
+  .editor-actions { flex-wrap: wrap; }
   footer { grid-template-columns: 1fr auto; gap: 8px; }
   footer p:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
 }

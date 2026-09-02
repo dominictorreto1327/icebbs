@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>硬件开发 · 冰点论坛</title>
+  <meta name="description" content="ICEBBS 冰点论坛的硬件开发版块。">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.svg">
+</head>
+<body data-board-page data-board-id="hardware">
+  <div class="site-shell">
+    <header class="masthead">
+      <div class="brand-row">
+        <a class="brand" href="../" aria-label="冰点论坛首页">
+          <span class="brand-seal">冰</span>
+          <span>
+            <strong>冰点论坛</strong>
+            <small>ICEBBS · SINCE 2026</small>
+          </span>
+        </a>
+        <p class="masthead-note">一个人的论坛，一些长期存在的东西。</p>
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="../">论坛首页</a>
+        <span class="nav-placeholder" aria-hidden="true"></span>
+        <span class="nav-placeholder" aria-hidden="true"></span>
+        <a href="../build-log/">建站日志</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="crumbs">
+        <a href="../">冰点论坛</a>
+        <span>›</span>
+        <strong>硬件开发</strong>
+      </div>
+
+      <section class="panel">
+        <div class="panel-title">
+          <h1>硬件开发</h1>
+          <div class="board-toolbar">
+            <span>版块页面</span>
+            <button class="button" type="button" data-new-post aria-controls="post-editor" aria-expanded="false">发帖</button>
+          </div>
+        </div>
+        <div class="panel-body board-summary">
+          <p>电子制作、设备改造与硬件项目记录。</p>
+          <p class="board-total">文章总数：<strong data-board-total>0</strong></p>
+        </div>
+      </section>
+
+      <section class="panel post-editor" id="post-editor" data-post-editor hidden>
+        <div class="panel-title">
+          <h2>发表文章</h2>
+          <span>硬件开发</span>
+        </div>
+        <div class="panel-body">
+          <p class="storage-notice">当前网站没有服务器，文章只会保存在这个浏览器中，不会自动写回 GitHub 仓库。</p>
+          <form class="editor-form">
+            <label>
+              文章标题
+              <input type="text" name="title" maxlength="120" autocomplete="off" required>
+            </label>
+            <label>
+              正文
+              <textarea name="content" rows="12" required></textarea>
+            </label>
+            <div class="editor-actions">
+              <button class="button" type="submit">发布文章</button>
+              <button class="button button-secondary" type="button" data-cancel-post>取消</button>
+            </div>
+            <p class="editor-status" data-editor-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel boards-panel">
+        <div class="panel-title">
+          <h2>本版文章</h2>
+          <span>按发布时间排列</span>
+        </div>
+        <div class="topic-list" data-post-list></div>
+      </section>
+
+      <noscript>
+        <p class="storage-notice">需要启用 JavaScript 才能读取文章、自动统计和使用发帖编辑器。</p>
+      </noscript>
+    </main>
+
+    <footer>
+      <p>ICEBBS · 冰点论坛</p>
+      <p>此处没有新帖提醒，只有慢慢增加的内容。</p>
+      <a href="#top">返回顶部 ↑</a>
+    </footer>
+  </div>
+
+  <script src="../posts.js"></script>
+  <script src="../forum.js"></script>
+</body>
+</html>
+
